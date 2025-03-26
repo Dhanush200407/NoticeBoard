@@ -111,6 +111,28 @@ app.post('/login', (req, res) => {
     );
 });
 
+// Get all users
+app.get('/users', (req, res) => {
+    db.query('SELECT * FROM users', (err, results) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+        return;
+      }
+      res.json(results);
+    });
+  });
+  
+  // Delete a user
+  app.delete('/delete-user/:id', (req, res) => {
+    const { id } = req.params;
+    db.query('DELETE FROM users WHERE id = ?', [id], (err, results) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+        return;
+      }
+      res.status(200).json({ message: 'User deleted successfully!' });
+    });
+  });
 
 // Start the server
 app.listen(port, () => {

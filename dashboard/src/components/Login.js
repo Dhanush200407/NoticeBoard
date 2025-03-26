@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import '../styles/Login.css';
 
 function Login() {
   const [isSignUp, setIsSignUp] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", password: "" });
+  const [adminPassword, setAdminPassword] = useState(""); // State for admin password input
   const navigate = useNavigate(); // For navigation after successful login
 
   // Handle input changes
@@ -49,11 +50,33 @@ function Login() {
     }
   };
 
+  const handleAdminAccess = () => {
+    const correctPassword = "Dhanush@200407"; // Admin password
+    if (adminPassword === correctPassword) {
+      navigate('/admin'); // Redirect to admin page
+    } else {
+      alert("Incorrect password. Access denied.");
+    }
+  };
+
   return (
     <>
       {/* Separated Header */}
       <header className="login-header1">
         <h1 className="login-title1">Notice Board</h1>
+        <button
+          className="nav-linkh"
+          onClick={() => {
+            const password = prompt("Enter Admin Password:");
+            if (password === "Dhanush@200407") {
+              navigate('/admin');
+            } else {
+              alert("Incorrect password. Access denied.");
+            }
+          }}
+        >
+          Admin Page
+        </button>
       </header>
 
       {/* Centered Form */}
@@ -108,4 +131,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Login; 

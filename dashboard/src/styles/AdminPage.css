@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(213, 196, 195);
+}
+
+.admin-container {
+    
+    font-family: Arial, sans-serif;
+  }
+  
+  .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fd6569;
+    padding: 15px;
+    color: white;
+  }
+  
+  .user-list {
+    margin-top: 20px;
+  }
+  
+  .user-item {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .delete-button {
+    background-color: #fd6569;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }

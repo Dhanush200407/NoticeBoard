@@ -9,7 +9,7 @@ body {
   .login-header1 {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
     background-color: #fd6569;
     color: white;
