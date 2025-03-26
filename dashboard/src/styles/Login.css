@@ -1,0 +1,95 @@
+/* General Page Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+  }
+  
+  /* Header Styles */
+  .login-header1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fd6569;
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .login-title1 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  /* Centered Form Container */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 60px; /* To adjust for fixed header */
+  }
+  
+  /* Form Wrapper */
+  .login-form-wrapper {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+  }
+  
+  /* Form Heading */
+  .login-heading {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  /* Input Fields */
+  .login-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Submit Button */
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff8a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #f47070;
+  }
+  
+  /* Toggle between Login & Sign Up */
+  .login-toggle-text {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .login-toggle-link {
+    color: #ad7575;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .login-toggle-link:hover {
+    color: rgb(255, 0, 0);
+  }
+  
